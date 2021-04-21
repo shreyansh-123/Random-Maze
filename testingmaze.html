@@ -1,0 +1,60 @@
+<html>
+<head>
+    <style>
+        body
+        {
+            position: relative;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            
+        }
+    .Main
+        {
+            position: absolute;
+            height: 500px;
+            width: 600px;
+            background-color: lightgray;
+            border: 30px solid black;
+        }
+        .mblock
+        {
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            background-color: black;
+            flex-direction: column;
+            margin: 10px;
+        }
+        #
+        {
+            position: absolute;
+        }
+    </style>
+    <body>
+        <div class="Main">
+            <div id="maze"></div>
+        </div>
+    </body>
+    </head>
+    <script>
+        const maze = document.getElementById('maze');
+        let Random = Math.floor(Math.random() * 20)*10;
+        for(i=0;i<=Random + 1;i++)
+            {
+                const blocks = document.createElement('div');
+                blocks.classList.add('mblock');
+                
+                maze.appendChild(blocks);
+                blocks.style.top = Math.floor(Math.random() * 50)*10 + "px";
+                blocks.style.left = Math.floor(Math.random() * 55)*10 + "px";
+            }
+        for(i=0;i<=Random;i++)
+            {
+            //maze.style.top = Random + 'px';
+            }
+    </script>
+</html>
